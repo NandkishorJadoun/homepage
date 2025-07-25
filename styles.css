@@ -1,0 +1,286 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --city-blue: #6CABDD;
+    --city-yellow: #F6BE00;
+    --bg-dark: #001a33;
+    --card-dark: #0D1B2A;
+    --text-light: #F2F2F2;
+    --text-muted: #a5b2c5;
+    --border-color: #233142;
+    --font-primary: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Hiding Scroll-bar */
+
+body {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+    max-width: 1200px;
+    min-height: 100vh;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    font-family: var(--font-primary);
+    margin: 0 auto;
+    display: flex;
+    padding: 3rem;
+    gap: 3rem;
+    flex-direction: column;
+}
+
+/* Colors */
+
+header,
+footer,
+main {
+    background-color: var(--card-dark);
+    border: 1px solid var(--border-color);
+}
+
+p {
+    color: var(--text-muted);
+    line-height: 1.2;
+}
+
+h1 {
+    color: var(--text-light);
+}
+
+a,
+.card-title:hover {
+    color: var(--city-blue);
+    text-decoration: underline;
+}
+
+
+/* Header */
+
+header {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    padding: 3rem;
+    font-size: 1.1rem;
+}
+
+header>img {
+    width: 350px;
+    height: auto;
+    border: 2px solid var(--border-color);
+}
+
+header>div {
+    display: grid;
+    gap: 1rem;
+    padding: 2rem 1.5rem;
+    background-color: #001529;
+    border: 2px solid var(--border-color);
+    border-left: 0;
+}
+
+.contact-links {
+    justify-self: end;
+    padding-right: 1rem;
+}
+
+.contact-links img {
+    background-color: #083456;
+    margin-right: 0.5rem;
+    width: 2.5rem;
+    padding: 0.4rem;
+    border-radius: 50%;
+}
+
+/* main */
+
+main {
+    padding: 3rem;
+}
+
+main>h1 {
+    margin-bottom: 1.5rem;
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: #001529;
+    border: 2px solid var(--border-color);
+}
+
+.card-text {
+    padding: 0.5rem 1rem;
+}
+
+.card-title {
+    color: var(--city-blue);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.card-text>div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-text>p {
+    margin-top: 0.5rem;
+    min-height: 4rem;
+}
+
+section img[src$="svg"] {
+    width: 2rem;
+    background-color: #083456;
+    padding: 4px;
+    margin-right: 4px;
+    border-radius: 50%;
+
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+    gap: 1rem;
+    padding: 3rem;
+    font-size: 1.1rem;
+}
+
+footer img[src$=".webp"] {
+    width: 60%;
+    object-fit: cover;
+}
+
+footer>div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.club-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.club-info>div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.club-info img {
+    width: 2rem;
+}
+
+.footer-contact-links>img {
+    width: 3rem;
+    background-color: #083456;
+    margin-right: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+}
+
+@media (min-width: 600px) and (max-width: 899px) {
+
+    body,
+    header,
+    main,
+    footer {
+        padding: 2rem;
+    }
+
+    body {
+        gap: 2rem;
+    }
+
+    header>img {
+        width: 200px;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .contact-links {
+        display: none;
+    }
+
+    section {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+    }
+
+    footer img[src$=".webp"] {
+        width: 35%;
+    }
+}
+
+@media (max-width: 600px) {
+
+    header,
+    main,
+    footer>div {
+        padding: 1rem;
+        background-color: var(--bg-dark);
+    }
+
+    header,
+    main,
+    footer,
+    header>div {
+        border: 0px;
+    }
+
+    body,
+    footer {
+        padding: 0rem;
+    }
+
+    body {
+        gap: 1rem;
+    }
+
+    header {
+        grid-template-rows: auto auto;
+        text-align: center;
+    }
+
+    header>div {
+        grid-row: 2;
+        background-color: var(--bg-dark);
+    }
+
+    .contact-links {
+        justify-self: center;
+        padding-right: 0;
+    }
+
+    header>img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    footer>img[src$=".webp"] {
+        width: 100%;
+    }
+}
