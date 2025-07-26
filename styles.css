@@ -1,31 +1,15 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
 :root {
     --city-blue: #6CABDD;
     --bg-dark: #001a33;
-    --text-light: #F2F2F2;
     --text-muted: #d6e7ff;
     --border-color: #233142;
 }
 
 body {
-    max-width: 1200px;
-    min-height: 100vh;
-    background-color: var(--bg-dark);
-    color: var(--text-light);
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    margin: 0 auto;
     display: flex;
-    padding: 3rem;
     gap: 3rem;
     flex-direction: column;
 }
-
-/* Colors */
 
 p {
     color: var(--text-muted);
@@ -36,20 +20,14 @@ h1 {
     color: var(--text-light);
 }
 
-a,
 .card-title:hover {
-    color: var(--city-blue);
     text-decoration: underline;
 }
-
-
-/* Header */
 
 header {
     display: grid;
     grid-template-columns: auto auto;
     align-items: center;
-    padding: 3rem;
     font-size: 1.1rem;
 }
 
@@ -63,7 +41,6 @@ header>div {
     display: grid;
     gap: 1rem;
     padding: 2rem 1.5rem;
-    background-color: #001529;
     border: 2px solid var(--border-color);
     border-left: 0;
 }
@@ -73,7 +50,7 @@ header>div {
     padding-right: 1rem;
 }
 
-.contact-links a{
+.contact-links a {
     margin-right: 0.5rem;
 }
 
@@ -85,10 +62,6 @@ header>div {
 }
 
 /* main */
-
-main {
-    padding: 3rem;
-}
 
 main>h1 {
     margin-bottom: 1.5rem;
@@ -128,7 +101,7 @@ section {
     min-height: 4rem;
 }
 
-section a{
+section a {
     margin-right: 4px;
 }
 
@@ -137,15 +110,11 @@ section img[src$="svg"] {
     background-color: #083456;
     padding: 4px;
     border-radius: 50%;
-
 }
-
-/* Footer */
 
 footer {
     display: flex;
     gap: 1rem;
-    padding: 3rem;
     font-size: 1.1rem;
 }
 
@@ -176,7 +145,7 @@ footer>div {
     width: 2rem;
 }
 
-.footer-contact-links a{
+.footer-contact-links a {
     margin-right: 0.5rem;
 }
 
@@ -189,15 +158,8 @@ footer>div {
 
 @media (min-width: 600px) and (max-width: 899px) {
 
-    body,
-    header,
-    main,
-    footer {
-        padding: 2rem;
-    }
-
-    body {
-        gap: 2rem;
+    body{
+        padding: 4rem;
     }
 
     header>img {
@@ -225,15 +187,17 @@ footer>div {
     header,
     main,
     footer>div {
-        padding: 1rem;
-        background-color: var(--bg-dark);
+        padding: 2rem;
     }
 
-    header,
-    main,
-    footer,
+    header, main, footer>div{
+        padding-bottom: 0;
+    }
+
     header>div {
         border: 0px;
+        padding: 1rem 0 0 0;
+        grid-row: 2;
     }
 
     body,
@@ -242,17 +206,12 @@ footer>div {
     }
 
     body {
-        gap: 1rem;
+        gap: 0rem;
     }
 
     header {
         grid-template-rows: auto auto;
         text-align: center;
-    }
-
-    header>div {
-        grid-row: 2;
-        background-color: var(--bg-dark);
     }
 
     .contact-links {
