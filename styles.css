@@ -158,8 +158,8 @@ footer>div {
 
 @media (min-width: 600px) and (max-width: 899px) {
 
-    body{
-        padding: 4rem;
+    body {
+        padding: 2rem;
     }
 
     header>img {
@@ -190,7 +190,9 @@ footer>div {
         padding: 2rem;
     }
 
-    header, main, footer>div{
+    header,
+    main,
+    footer>div {
         padding-bottom: 0;
     }
 
@@ -217,6 +219,11 @@ footer>div {
     .contact-links {
         justify-self: center;
         padding-right: 0;
+    }
+
+    section {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
     }
 
     header>img {
